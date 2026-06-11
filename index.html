@@ -1,0 +1,20 @@
+{# J. Bryant Boyd Lookbook Embed Module #}
+{% set lookbook_url = module.lookbook_url or "https://j-bryant-boyd-showcase.lovable.app" %}
+{% set ratio = module.aspect_ratio or "75" %}{# % height vs width — 75 = 4:3 #}
+
+<div class="jbb-lookbook-wrap" style="--jbb-ratio: {{ ratio }};">
+  <div class="jbb-lookbook-frame">
+    <iframe
+      src="{{ lookbook_url }}"
+      title="J. Bryant Boyd · The Lookbook"
+      loading="lazy"
+      allow="fullscreen; clipboard-write"
+      allowfullscreen
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <button type="button" class="jbb-lookbook-fs" aria-label="View fullscreen">
+    ⛶ Fullscreen
+  </button>
+</div>
